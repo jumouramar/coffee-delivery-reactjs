@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.main`
-    
+    h2 {
+        font: 800 2rem 'Baloo 2';
+        color: ${props => props.theme['gray-700']};
+    }
 `;
 
 export const IntroContainer = styled.div`
@@ -52,5 +55,10 @@ export const Item = styled.div`
 `;
 
 export const CoffeeListContainer = styled.div`
-
+    padding: 3rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem 2rem;
 `;
