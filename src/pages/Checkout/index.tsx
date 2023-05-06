@@ -1,12 +1,14 @@
 import { Bank, CreditCard, CurrencyDollar, MapPinLine, Money } from "phosphor-react";
+import { CheckoutAdress, CheckoutContainer, CheckoutOrder, CheckoutPaymentMethod, CheckoutSelected, CheckoutSelectedContainer } from "./style";
+import { CheckoutItem } from "../../components/CheckoutItem";
 
 export function Checkout() {
     return (
-        <>
-            <div>
+        <CheckoutContainer>
+            <CheckoutOrder>
                 <h4>Complete seu pedido</h4>
-                <div>
-                    <div>
+                <CheckoutAdress>
+                    <header>
                         <div>
                             <MapPinLine size={32} />
                         </div>
@@ -14,13 +16,11 @@ export function Checkout() {
                             <strong>Endereço de Entrega</strong>
                             <p>Informe o endereço onde deseja receber seu pedido</p>
                         </div>
-                    </div>
-                    <div>
-                        form
-                    </div>
-                </div>
-                <div>
-                    <div>
+                    </header>
+                    <form action="">Form aqui</form>
+                </CheckoutAdress>
+                <CheckoutPaymentMethod>
+                    <header>
                         <div>
                             <CurrencyDollar size={32} />
                         </div>
@@ -28,7 +28,7 @@ export function Checkout() {
                             <strong>Pagamento</strong>
                             <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
                         </div>
-                    </div>
+                    </header>
                     <div>
                         <button>
                             <CreditCard size={32} />
@@ -43,24 +43,12 @@ export function Checkout() {
                             <p>DINHEIRO</p>
                         </button>
                     </div>
-                </div>
-            </div>
-            <div>
+                </CheckoutPaymentMethod>
+            </CheckoutOrder>
+            <CheckoutSelectedContainer>
                 <h4>Cafés Selecionados</h4>
-                <div>
-                    <div>Cafés</div>
+                <CheckoutSelected>
                     <div>
-                        <div>
-                            <div>
-                                <p>Expresso Tradicional</p>
-                                <strong>R$ 9,90</strong>
-                            </div>
-                            <div>
-                                <button>
-                                    REMOVER
-                                </button>
-                            </div>
-                        </div>
                         <div>
                             <p>Total de Itens</p>
                             <p>Entrega</p>
@@ -72,13 +60,11 @@ export function Checkout() {
                             <strong>R$ 33,20</strong>
                         </div>
                     </div>
-                   
                     <button>
                         CONFIRMAR PEDIDO
                     </button>
-                    
-                </div>
-            </div>
-        </>
+                </CheckoutSelected>
+            </CheckoutSelectedContainer>
+        </CheckoutContainer>
     );
 }
