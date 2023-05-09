@@ -19,7 +19,7 @@ export const CheckoutOrder = styled.div`
     gap: 1rem;
 `;
 
-export const CheckoutAdress = styled.div`
+export const CheckoutAdressAndPayment = styled.div`
     background: ${(props) => props.theme['gray-100']};
     border-radius: 6px;
     padding: 2.5rem;
@@ -27,28 +27,45 @@ export const CheckoutAdress = styled.div`
     header {
         display: flex;
         gap: .5rem;
-    }
-
-    form {
-        margin-top: 2rem;
-    }
-`;
-
-export const CheckoutPaymentMethod = styled.div`
-    background: ${(props) => props.theme['gray-100']};
-    border-radius: 6px;
-    padding: 2.5rem;
-
-    header {
-        display: flex;
-        gap: .5rem;
+        margin-bottom: 2rem;
     }
 
     > div {
-        margin-top: 2rem;
-        display: flex;
-        justify-content: space-between;
-        gap: 0.75rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 0.75rem;
+    }
+
+    > form {
+        
+    }
+`;
+
+export const PaymentButton = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: ${(props) => props.theme['gray-300']};
+    color: ${(props) => props.theme['purple']};
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+
+    p {
+        font: 400 0.75rem 'Roboto';
+        text-transform: uppercase;
+        color: ${(props) => props.theme['gray-600']};
+    }
+
+    &:hover {
+        background: ${(props) => props.theme['gray-400']};
+    }
+
+    &:focus {
+        background: ${(props) => props.theme['purple-light']};
+        border: 1px solid ${(props) => props.theme['purple']};
     }
 `;
 

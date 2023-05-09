@@ -1,5 +1,5 @@
 import { Bank, CreditCard, CurrencyDollar, MapPinLine, Money } from "phosphor-react";
-import { CheckoutAdress, CheckoutContainer, CheckoutOrder, CheckoutPaymentMethod, CheckoutSelected, CheckoutSelectedContainer } from "./style";
+import { CheckoutAdressAndPayment, CheckoutContainer, CheckoutOrder, CheckoutSelected, CheckoutSelectedContainer, PaymentButton } from "./style";
 import { CheckoutItem } from "../../components/CheckoutItem";
 
 export function Checkout() {
@@ -7,22 +7,23 @@ export function Checkout() {
         <CheckoutContainer>
             <CheckoutOrder>
                 <h4>Complete seu pedido</h4>
-                <CheckoutAdress>
+                <CheckoutAdressAndPayment>
                     <header>
                         <div>
-                            <MapPinLine size={32} />
+                            <MapPinLine size={22} />
                         </div>
                         <div>
                             <strong>Endereço de Entrega</strong>
                             <p>Informe o endereço onde deseja receber seu pedido</p>
                         </div>
                     </header>
-                    <form action="">Form aqui</form>
-                </CheckoutAdress>
-                <CheckoutPaymentMethod>
+                    <form action="">
+                    </form>
+                </CheckoutAdressAndPayment>
+                <CheckoutAdressAndPayment>
                     <header>
                         <div>
-                            <CurrencyDollar size={32} />
+                            <CurrencyDollar size={22} />
                         </div>
                         <div>
                             <strong>Pagamento</strong>
@@ -30,20 +31,20 @@ export function Checkout() {
                         </div>
                     </header>
                     <div>
-                        <button>
-                            <CreditCard size={32} />
+                        <PaymentButton>
+                            <CreditCard size={16} />
                             <p>CARTÃO DE CRÉDITO</p>
-                        </button>
-                        <button>
-                            <Bank size={32} />
+                        </PaymentButton>
+                        <PaymentButton>
+                            <Bank size={16} />
                             <p>CARTÃO DE DÉBITO</p>
-                        </button>
-                        <button>
-                            <Money size={32} />
+                        </PaymentButton>
+                        <PaymentButton>
+                            <Money size={16} />
                             <p>DINHEIRO</p>
-                        </button>
+                        </PaymentButton>
                     </div>
-                </CheckoutPaymentMethod>
+                </CheckoutAdressAndPayment>
             </CheckoutOrder>
             <CheckoutSelectedContainer>
                 <h4>Cafés Selecionados</h4>
