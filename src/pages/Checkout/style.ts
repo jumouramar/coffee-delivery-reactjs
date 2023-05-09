@@ -1,25 +1,39 @@
 import styled from "styled-components";
 
-export const CheckoutContainer = styled.div`
+export const CheckoutContainer = styled.main`
+    padding: 2.5rem 2rem;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
-
+    
     h4 {
-        font-family: 'Baloo 2';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 130%;
+        font: 700 1.125rem 'Baloo 2';
+        color: ${(props) => props.theme['gray-700']};
+    }
+
+    strong {
+        font: 400 1rem 'Roboto';
+        line-height: 1.3125rem;
+        color: ${(props) => props.theme['gray-700']};
+    }
+
+    p {
+        font: 400 0.875rem 'Roboto';
+        line-height: 1.125rem;
+        color: ${(props) => props.theme['gray-600']};
     }
 `;
 
 export const CheckoutOrder = styled.div`
+    max-width: 640px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 `;
 
 export const CheckoutAdressAndPayment = styled.div`
+
     background: ${(props) => props.theme['gray-100']};
     border-radius: 6px;
     padding: 2.5rem;
@@ -37,6 +51,9 @@ export const CheckoutAdressAndPayment = styled.div`
     }
 
     > form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
         
     }
 `;
@@ -52,12 +69,7 @@ export const PaymentButton = styled.button`
     border: 1px solid transparent;
     border-radius: 6px;
     cursor: pointer;
-
-    p {
-        font: 400 0.75rem 'Roboto';
-        text-transform: uppercase;
-        color: ${(props) => props.theme['gray-600']};
-    }
+    text-transform: uppercase;
 
     &:hover {
         background: ${(props) => props.theme['gray-400']};
@@ -94,5 +106,9 @@ export const CheckoutSelected = styled.div`
         border-radius: 6px;
         padding: 0.75rem 5rem;
         cursor: pointer;
+
+        &:hover {
+            background: ${(props) => props.theme['yellow-dark']};
+        }
     }
 `;

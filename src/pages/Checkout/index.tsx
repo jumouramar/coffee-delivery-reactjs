@@ -1,6 +1,6 @@
 import { Bank, CreditCard, CurrencyDollar, MapPinLine, Money } from "phosphor-react";
 import { CheckoutAdressAndPayment, CheckoutContainer, CheckoutOrder, CheckoutSelected, CheckoutSelectedContainer, PaymentButton } from "./style";
-import { CheckoutItem } from "../../components/CheckoutItem";
+import { NavLink } from "react-router-dom";
 
 export function Checkout() {
     return (
@@ -18,6 +18,13 @@ export function Checkout() {
                         </div>
                     </header>
                     <form action="">
+                        <input type="text" value="CEP" />
+                        <input type="text" value="Rua" />
+                        <input type="text" value="Número" />
+                        <input type="text" value="Complemento" />
+                        <input type="text" value="Bairro" />
+                        <input type="text" value="Cidade" />
+                        <input type="text" value="UF" />
                     </form>
                 </CheckoutAdressAndPayment>
                 <CheckoutAdressAndPayment>
@@ -61,9 +68,11 @@ export function Checkout() {
                             <strong>R$ 33,20</strong>
                         </div>
                     </div>
-                    <button>
-                        CONFIRMAR PEDIDO
-                    </button>
+                    <NavLink to="/success" >
+                         <button>
+                            CONFIRMAR PEDIDO
+                        </button>
+                    </NavLink>
                 </CheckoutSelected>
             </CheckoutSelectedContainer>
         </CheckoutContainer>
