@@ -2,15 +2,30 @@ import { ShoppingCart } from "phosphor-react";
 import imgAmericano from "../../assets/americano.png";
 import { CoffeeButton, CoffeeCardContainer, CoffeeCounter, CoffeeFooter, CoffeeType } from "./styles";
 
-export function CoffeeCard() {
+interface CoffeeTypes {
+    type: string;
+    iced: boolean;
+    hasMilk: boolean;
+    hasAlcool: boolean;
+}
+interface CoffeesList {
+    id: Int16Array;
+    name: string;
+    image?: string;
+    props: CoffeeTypes;
+    description: string;
+    price: DoubleRange;
+}
+
+export function CoffeeCard({name, description}) {
     return (
         <CoffeeCardContainer>
             <img src={imgAmericano} alt="" />
             <CoffeeType>
                 TRADICIONAL
             </CoffeeType>
-            <strong>Expresso Tradicional</strong>                       
-            <p>O tradicional café feito com água quente e grãos moídos</p>
+            <strong>{name}</strong>                       
+            <p>{description}</p>
             <CoffeeFooter>
                 <div>
                     <p>R$</p> 
