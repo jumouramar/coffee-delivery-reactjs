@@ -202,19 +202,19 @@ export function Home() {
                         <h3>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</h3>
                     </TitleContainer>
                     <ItemsContainer>
-                        <Item>
-                            <ShoppingCart size={16} weight="fill" />
+                        <Item backgroundColor="orange">
+                              <ShoppingCart size={16} weight="fill" />
                             <p>Compra simples e segura</p>
                         </Item>
-                        <Item>
+                        <Item backgroundColor="gray">
                             <Package size={16} weight="fill" />
                             <p>Embalagem mantém o café intacto</p>
                         </Item>
-                        <Item>
+                        <Item backgroundColor="yellow">
                             <Timer size={16} weight="fill" />
                             <p>Entrega rápida e rastreada</p>
                         </Item>
-                        <Item>
+                        <Item backgroundColor="purple">
                             <Coffee size={16} weight="fill" />
                             <p>O café chega fresquinho até você</p>
                         </Item>

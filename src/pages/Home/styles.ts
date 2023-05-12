@@ -53,16 +53,27 @@ export const ItemsContainer = styled.div`
     }
 `;
 
-export const Item = styled.div`
+const BACKGROUND_COLORS = {
+    orange: 'yellow-dark',
+    yellow: 'yellow',
+    gray: 'gray-600',
+    purple: 'purple',
+} as const
+
+interface BackgroundCircleProps {
+    backgroundColor: 'orange' | 'yellow' | 'gray' | 'purple';
+}
+
+export const Item = styled.div<BackgroundCircleProps>`
     display: flex;
     align-items: center;
     gap: 1rem;
     flex-basis: 50%;
 
     & > :first-child {
-        color: ${props => props.theme['white-200']};;
-        background: ${props => props.theme['yellow-dark']};
-        border: 0.5rem solid ${props => props.theme['yellow-dark']};
+        color: ${props => props.theme['white-200']};
+        background: ${props => props.theme[BACKGROUND_COLORS[props.backgroundColor]]};
+        border: 0.5rem solid ${props => props.theme[BACKGROUND_COLORS[props.backgroundColor]]};
         border-radius: 999px;
     }
 
