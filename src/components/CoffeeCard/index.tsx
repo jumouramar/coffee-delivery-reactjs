@@ -1,6 +1,7 @@
 import { ShoppingCart } from "phosphor-react";
 import imgAmericano from "../../assets/americano.png";
 import { CoffeeButton, CoffeeCardContainer, CoffeeCounter, CoffeeFooter, CoffeeType } from "./styles";
+import { CoffeeTag } from "../CoffeeTag";
 
 interface CoffeeTypes {
     type: string;
@@ -21,9 +22,7 @@ export function CoffeeCard({name, description}) {
     return (
         <CoffeeCardContainer>
             <img src={imgAmericano} alt="" />
-            <CoffeeType>
-                TRADICIONAL
-            </CoffeeType>
+            <CoffeeTag />
             <strong>{name}</strong>                       
             <p>{description}</p>
             <CoffeeFooter>

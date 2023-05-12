@@ -29,17 +29,6 @@ export const CoffeeCardContainer = styled.div`
     }
 `;
 
-export const CoffeeType = styled.div`
-    color: ${(props) => props.theme['yellow-dark']};;
-    background: ${(props) => props.theme['yellow-light']};
-    border-radius: 50px;
-    padding: .5rem;
-    margin: 1rem;
-
-    font: 700 0.625rem 'Roboto';
-    text-transform: uppercase;
-`;
-
 export const CoffeeFooter = styled.footer`
     display: flex;
     align-items: center;
