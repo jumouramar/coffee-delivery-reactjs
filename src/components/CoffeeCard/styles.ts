@@ -8,7 +8,7 @@ export const CoffeeCardContainer = styled.div`
     background: ${(props) => props.theme['gray-100']};
     border-top-right-radius: 36px;
     border-bottom-left-radius: 36px;
-    width: 13.5rem;
+    width: 13rem;
     padding: 0 1.5rem;
 
     text-align: center;

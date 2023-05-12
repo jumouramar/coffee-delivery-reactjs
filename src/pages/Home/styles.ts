@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.main`
+    padding: 0 2rem;
+
     h2 {
         font: 800 2rem 'Baloo 2';
         color: ${props => props.theme['gray-700']};
@@ -10,7 +12,7 @@ export const HomeContainer = styled.main`
 export const IntroContainer = styled.div`
     display: flex;
     gap: 1rem;
-    padding: 5rem 2rem;
+    padding: 5rem 0rem;
 
 
     @media (max-width: 1200px) {
