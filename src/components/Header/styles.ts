@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
+
+    background: ${(props) => props.theme['white-100']};
+    position: sticky;
+    top: 0;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 2rem 0;
+    padding: 2rem 2rem;
 
     nav {
         display: flex;
