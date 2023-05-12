@@ -11,6 +11,19 @@ export const IntroContainer = styled.div`
     display: flex;
     gap: 1rem;
     padding: 5rem 2rem;
+
+
+    @media (max-width: 1200px) {
+        flex-flow: wrap-reverse;
+        max-width: 650px;
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+
+        > img {
+            width: 25rem;
+        }
+    }
 `;
 
 export const TitleContainer = styled.div`
@@ -33,6 +46,11 @@ export const ItemsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 1rem 0;
+
+    @media (max-width: 660px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const Item = styled.div`
